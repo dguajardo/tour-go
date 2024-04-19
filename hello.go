@@ -57,6 +57,14 @@ func sqrt(x float64) string {
 	return fmt.Sprint(math.Sqrt(x))
 }
 
+// if short
+func pow(x, n, lim float64) float64 {
+	if v := math.Pow(x, n); v < lim {
+		return v
+	}
+	return lim
+}
+
 func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println("The time is", time.Now())
@@ -134,5 +142,10 @@ func main() {
 	fmt.Println(sum2)
 
 	fmt.Println(sqrt(2), sqrt(-4))
+
+	fmt.Println(
+		pow(3, 2, 10),
+		pow(3, 3, 20),
+	)
 
 }
