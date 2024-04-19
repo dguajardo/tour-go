@@ -49,6 +49,14 @@ func needFloat(x float64) float64 {
 	return x * 0.1
 }
 
+// If statement
+func sqrt(x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
+	return fmt.Sprint(math.Sqrt(x))
+}
+
 func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println("The time is", time.Now())
@@ -124,5 +132,7 @@ func main() {
 		sum2 += sum2
 	}
 	fmt.Println(sum2)
+
+	fmt.Println(sqrt(2), sqrt(-4))
 
 }
