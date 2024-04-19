@@ -20,6 +20,8 @@ var (
 	z      complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
+const Pi = 3.14
+
 func add(x int, y int) int {
 	return x + y
 }
@@ -75,4 +77,12 @@ func main() {
 	// Type inference
 	v := 42 // change me!
 	fmt.Printf("v is of type %T\n", v)
+
+	// Constants
+	const World = "世界"
+	fmt.Println("Hello", World)
+	fmt.Println("Happy", Pi, "Day")
+
+	const Truth = true
+	fmt.Println("Go rules?", Truth)
 }
