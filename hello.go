@@ -68,6 +68,16 @@ func pow(x, n, lim float64) float64 {
 	return lim
 }
 
+func Sqrt(x float64) float64 {
+	z := 1.0
+	for i := 0; i < 10; i++ {
+		z -= (z*z - x) / (2 * z)
+		fmt.Println(z)
+	}
+
+	return z
+}
+
 func main() {
 	fmt.Println("Hello, 世界")
 	fmt.Println("The time is", time.Now())
@@ -150,5 +160,7 @@ func main() {
 		pow(3, 2, 10),
 		pow(3, 3, 20),
 	)
+
+	fmt.Println(Sqrt(2))
 
 }
