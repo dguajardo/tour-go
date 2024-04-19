@@ -192,4 +192,30 @@ func main() {
 		fmt.Println("Too far away.")
 	}
 
+	// no condition switch
+
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon.")
+	default:
+		fmt.Println("Good evening.")
+	}
+
+	// Defer
+	defer fmt.Println("world")
+
+	fmt.Println("hello")
+
+	// stacking defer
+	fmt.Println("counting")
+
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
+
+	fmt.Println("done")
+
 }
