@@ -117,5 +117,12 @@ func main() {
 		sum1 += sum1
 	}
 	fmt.Println(sum1)
+	
+	// For go's while
+	sum2 := 1
+	for sum2 < 1000 {
+		sum2 += sum2
+	}
+	fmt.Println(sum2)
 
 }
